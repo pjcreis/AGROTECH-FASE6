@@ -14,17 +14,12 @@ import Contato from './components/Contato.jsx'
 
 import MicroFazenda from './models/MicroFazenda.js'
 
-// App é o componente principal. Ele guarda o estado da aplicação com useState
-// e distribui dados e funções para os componentes filhos por meio de props.
-// A navegação entre as páginas é feita com o React Router DOM.
 function App() {
     const [fazenda, setFazenda] = useState(function () {
         return MicroFazenda.criarComExemplos()
     })
     const [avisos, setAvisos] = useState([])
 
-    // O React redesenha a tela quando recebe um novo objeto no estado,
-    // por isso cada operação guarda uma cópia da micro-fazenda.
     function atualizar() {
         setFazenda(fazenda.clonar())
     }
