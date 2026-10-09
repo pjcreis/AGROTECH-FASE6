@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { culturas } from '../dados/culturas.js'
 
-// Componente filho: um card do catálogo.
-// Recebe a cultura e a função de clique por props.
 function CardCultura({ cultura, aoVerDetalhes }) {
     const chip = cultura.ehFacil() ? 'chip chip-verde' : 'chip chip-amarelo'
 
@@ -34,7 +32,6 @@ function CardCultura({ cultura, aoVerDetalhes }) {
     )
 }
 
-// Componente filho: o painel de detalhes de uma cultura.
 function DetalheCultura({ cultura, aoVoltar }) {
     return (
         <div className="col-12">
@@ -77,7 +74,6 @@ function DetalheCultura({ cultura, aoVoltar }) {
     )
 }
 
-// Página "Guia de Culturas".
 function Guia() {
     const [busca, setBusca] = useState('')
     const [selecionada, setSelecionada] = useState(null)
