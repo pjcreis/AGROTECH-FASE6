@@ -2,9 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import StatCard from './StatCard.jsx'
 
-// Componente filho: uma atividade do passo a passo.
-// O texto do detalhe vem do método detalhar(), que cada subclasse de
-// Tarefa implementa do seu jeito.
 function ItemTarefa({ idPlantio, tarefa, diasPassados, aoAlternar, aoRemover }) {
     const chips = {
         'Rega': 'chip chip-azul',
@@ -51,7 +48,6 @@ function ItemTarefa({ idPlantio, tarefa, diasPassados, aoAlternar, aoRemover }) 
     )
 }
 
-// Componente filho: formulário para acrescentar uma atividade ao plano.
 function FormTarefa({ idPlantio, cicloDias, aoAdicionar }) {
     const [tipo, setTipo] = useState('outra')
     const [descricao, setDescricao] = useState('')
@@ -184,7 +180,6 @@ function FormTarefa({ idPlantio, cicloDias, aoAdicionar }) {
     )
 }
 
-// Componente filho: o passo a passo de um plantio, agrupado por semana.
 function PlanoDoPlantio({ plantio, filtro, aoAlternarTarefa, aoAdicionarTarefa, aoRemoverTarefa }) {
     const semanaAtual = plantio.semanaAtual()
     const grupos = plantio.tarefasPorSemana()
@@ -262,7 +257,6 @@ function PlanoDoPlantio({ plantio, filtro, aoAlternarTarefa, aoAdicionarTarefa, 
     )
 }
 
-// Página "Manejo", a nova funcionalidade da Fase 6.
 function Manejo({ fazenda, aoAlternarTarefa, aoAdicionarTarefa, aoRemoverTarefa }) {
     const [selecionado, setSelecionado] = useState(0)
     const [filtro, setFiltro] = useState('todas')
@@ -272,7 +266,6 @@ function Manejo({ fazenda, aoAlternarTarefa, aoAdicionarTarefa, aoRemoverTarefa 
     const atrasadas = fazenda.totalTarefasAtrasadas()
     const concluidas = total - pendentes
 
-    // Se o plantio escolhido foi removido, volta para o primeiro da lista.
     let plantio = fazenda.plantios.find(function (p) {
         return p.id === selecionado
     })
