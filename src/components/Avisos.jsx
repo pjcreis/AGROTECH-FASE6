@@ -1,8 +1,5 @@
 import { useEffect } from 'react'
 
-// Aviso individual. O useEffect abaixo roda quando o componente é montado
-// na tela e agenda o fechamento automático. O return do useEffect é
-// executado quando o componente é desmontado, cancelando o agendamento.
 function Aviso({ id, texto, aoFechar }) {
     useEffect(function () {
         const tempo = setTimeout(function () {
@@ -21,7 +18,6 @@ function Aviso({ id, texto, aoFechar }) {
     )
 }
 
-// Lista de avisos exibida no canto da tela.
 function Avisos({ lista, aoFechar }) {
     return (
         <div id="toast-container" aria-live="polite">
