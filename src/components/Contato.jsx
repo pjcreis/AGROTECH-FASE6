@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react'
 
-// Página "Fale Conosco".
-// Os campos são controlados por useState e as validações continuam as
-// mesmas das fases anteriores: nome e sobrenome com ao menos duas letras
-// cada, e-mail em formato válido e mensagem de até 500 caracteres.
 function Contato({ aoEnviar }) {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
@@ -15,8 +11,6 @@ function Contato({ aoEnviar }) {
     const [enviado, setEnviado] = useState(false)
     const [restantes, setRestantes] = useState(500)
 
-    // Este useEffect roda somente quando o valor de "mensagem" muda.
-    // Ele mantém o contador de caracteres sincronizado com o campo.
     useEffect(function () {
         setRestantes(500 - mensagem.length)
     }, [mensagem])
