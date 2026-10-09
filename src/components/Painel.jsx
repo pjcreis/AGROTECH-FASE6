@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 import StatCard from './StatCard.jsx'
 import { culturas } from '../dados/culturas.js'
 
-// Componente filho: formulário de registro de plantio.
-// Guarda os campos no seu próprio useState e avisa o pai pela função
-// recebida em props quando o usuário confirma.
 function FormPlantio({ aoAdicionar }) {
     const [idCultura, setIdCultura] = useState('')
     const [mudas, setMudas] = useState('')
@@ -87,7 +84,6 @@ function FormPlantio({ aoAdicionar }) {
     )
 }
 
-// Componente filho: uma linha da tabela de plantios.
 function LinhaPlantio({ plantio, aoColher, aoRemover }) {
     const pct = plantio.calcularProgresso()
     const fase = plantio.obterFase()
