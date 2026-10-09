@@ -1,7 +1,3 @@
-// Página "O Sistema".
-// As funcionalidades ficam em uma lista e são desenhadas por um componente
-// filho que recebe os dados por props.
-
 const funcionalidades = [
     { id: 1, icone: '🌿', titulo: 'Cadastro de culturas', texto: 'Registre informações sobre diferentes tipos de plantas, incluindo requisitos de cultivo e períodos de colheita.' },
     { id: 2, icone: '🪴', titulo: 'Registro de plantio', texto: 'Documente cada plantio com local, quantidade de mudas e variedade cultivada. Mantenha o histórico de todas as operações.' },
@@ -11,7 +7,6 @@ const funcionalidades = [
     { id: 6, icone: '✅', titulo: 'Painel de produção', texto: 'Visualize um resumo com plantios ativos, próximas colheitas e tarefas pendentes em um único lugar.' }
 ]
 
-// Componente filho: recebe os dados de um card por props.
 function CardFuncionalidade({ icone, titulo, texto }) {
     return (
         <div className="col-md-6 col-lg-4">
