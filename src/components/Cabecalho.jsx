@@ -1,8 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 
-// Menu de navegação, reutilizado em toda a aplicação.
-// O NavLink do React Router troca a rota sem recarregar a página e
-// marca sozinho o link da página atual como ativo.
 function Cabecalho() {
     function classeDoLink({ isActive }) {
         return isActive ? 'nav-link active' : 'nav-link'
