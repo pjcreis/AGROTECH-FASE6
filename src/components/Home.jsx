@@ -23,7 +23,7 @@ function Home() {
                                     que querem produzir alimentos frescos em pequenos espaços, com mais controle e previsibilidade.
                                 </p>
                                 <a
-                                    href="https://www.youtube.com/watch?v=DsxkLdnpaEc"
+                                    href="https://youtu.be/4PPs-TOZlXM"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn vf-btn"
