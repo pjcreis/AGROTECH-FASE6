@@ -37,8 +37,9 @@ qualquer tipo, com ou sem repetição.
   `MicroFazenda`.
 - `src/dados/culturas.js` - catálogo de culturas.
 - `src/dados/rotinas.js` - receitas de manejo de alface, rúcula e cenoura.
-- `src/css/estilo.css` - estilos do projeto.
-- `public/_redirects` - faz o servidor de hospedagem entregar as rotas do React Router.
+- `src/css/estilo.css` — estilos de base do projeto.
+- `src/css/vertical.css` — tema visual das páginas, aplicado sobre o Bootstrap.
+- - `public/_redirects` - faz o servidor de hospedagem entregar as rotas do React Router.
 
 ## Páginas
 
