@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Topo } from './Vertical.jsx'
 
 function Contato({ aoEnviar }) {
     const [nome, setNome] = useState('')
@@ -97,25 +98,19 @@ function Contato({ aoEnviar }) {
     }
 
     return (
-        <div>
-            <header className="hero">
-                <div className="container">
-                    <h1 className="display-5 serif mb-3">Fale Conosco</h1>
-                    <p>
-                        Quer saber como organizar uma micro-fazenda vertical em sua instituição,
-                        condomínio ou projeto social? Envie uma mensagem.
-                    </p>
-                </div>
-            </header>
+        <div className="vf">
+            <Topo
+                titulo="Fale conosco"
+                texto="Quer saber como organizar uma micro-fazenda vertical em sua instituição, condomínio ou projeto social? Envie uma mensagem."
+            />
 
             <main>
-                <section className="secao">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <div className="card">
-                                    <div className="card-body p-4 p-md-5">
-                                        <h2 className="titulo-secao mb-3">Envie sua mensagem</h2>
+                <div className="container">
+                    <div className="vf-contato">
+                        <div className="vf-painel">
+                            <div className="vf-painel-topo"><h2>Envie sua mensagem</h2></div>
+                            <div className="vf-painel-corpo">
+                                <div>
 
                                         <form onSubmit={enviarFormulario} noValidate>
                                             <div className="mb-3">
@@ -190,8 +185,8 @@ function Contato({ aoEnviar }) {
                                                 ></textarea>
 
                                                 <div className="d-flex justify-content-between align-items-center mt-1">
-                                                    <small className="text-muted">Máximo de 500 caracteres.</small>
-                                                    <small className={restantes <= 50 ? 'text-muted fw-semibold' : 'text-muted'} aria-live="polite">
+                                                    <small className="vf-suave">Máximo de 500 caracteres.</small>
+                                                    <small className={restantes <= 50 ? 'vf-suave fw-semibold' : 'vf-suave'} aria-live="polite">
                                                         {mensagem.length}/500 caracteres
                                                     </small>
                                                 </div>
@@ -199,21 +194,20 @@ function Contato({ aoEnviar }) {
                                                 {erros.mensagem && <div className="invalid-feedback d-block">{erros.mensagem}</div>}
                                             </div>
 
-                                            <button className="btn btn-verde" type="submit">Enviar mensagem</button>
+                                            <button className="btn vf-btn" type="submit">Enviar mensagem</button>
                                         </form>
 
                                         {enviado && (
-                                            <div className="alert alert-success mt-4" role="alert">
+                                            <div className="vf-ok" role="alert">
                                                 <strong>Mensagem validada com sucesso.</strong><br />
                                                 Em uma versão futura, sua solicitação será enviada para análise.
                                             </div>
                                         )}
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </main>
         </div>
     )

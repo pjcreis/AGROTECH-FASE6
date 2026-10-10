@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { Icone } from './Vertical.jsx'
 
 function Cabecalho() {
     function classeDoLink({ isActive }) {
@@ -9,7 +10,8 @@ function Cabecalho() {
         <nav className="navbar navbar-expand-lg sticky-top">
             <div className="container">
                 <Link className="navbar-brand" to="/">
-                    Sistema Orquestrador de Micro-Fazendas <span>Verticais</span>
+                    <span className="vf-marca"><Icone nome="broto" tamanho={20} /></span>
+                    <span>Sistema Orquestrador de Micro-Fazendas <span>Verticais</span></span>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
                     <span className="navbar-toggler-icon"></span>
